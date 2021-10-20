@@ -110,7 +110,7 @@ class PrimitiveTrader:
         }
         posted_order = self.__send_post_request('order', post_data)
         if posted_order.get('errors') is None:
-            print(posted_order)
+            pprint(posted_order)
         else:
             self.log_errors(posted_order.get('errors'))
 
